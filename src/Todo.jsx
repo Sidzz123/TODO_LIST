@@ -27,7 +27,7 @@ function Todo() {
       setTasks(tasks.filter((task) => task.id !== id));
     }
     else{
-    setTasks(
+    setTasks( 
       tasks.map((task) =>
         task.id === id ? { ...task, text: editText } : task
         )
@@ -48,7 +48,7 @@ function Todo() {
         />
         <button onClick={handleAddTask}>Add</button>
       </div>
-
+    
       <ul className="task-list">
         {tasks.map((task) => (
           <li key={task.id}>
